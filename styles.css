@@ -1,0 +1,99 @@
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: gold;
+  text-align: center;
+}
+
+
+.fancy-btn {
+  background: dodgerblue;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.4s, transform 0.3s;
+}
+
+.fancy-btn:hover {
+  background: orange;
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.animated-box {
+  margin: 30px auto;
+  width: 80px;
+  height: 80px;
+  background: crimson;
+  border-radius: 12px;
+  animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  60% { transform: translateY(-30px) scaleX(1.1);}
+  100% { transform: translateY(-10px) scaleX(0.95);}
+}
+
+
+#magic-box {
+  margin: 40px auto;
+  width: 90px;
+  height: 90px;
+  background: mediumseagreen;
+  border-radius: 12px;
+  transition: transform 0.6s cubic-bezier(0.4,2,0.6,1), background 0.6s;
+}
+
+#magic-box.animated {
+  animation: spinAndGrow 0.8s forwards;
+  background: gold;
+}
+
+@keyframes spinAndGrow {
+  0% { transform: scale(1) rotate(0deg);}
+  70% { transform: scale(1.45) rotate(260deg);}
+  100% { transform: scale(1.1) rotate(360deg);}
+}
+
+#modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.5s;
+}
+
+#modal {
+  background: white;
+  color: black;
+  padding: 32px 40px;
+  border-radius: 14px;
+  box-shadow: 0 0 30px 5px rgba(255,215,0,0.3);
+  animation: modalIn 0.5s;
+}
+
+.modal-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes modalIn {
+  from { transform: translateY(-70px) scale(0.8); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Interactive Experience</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1> Interactive Animation Playground</h1>
+  
+  
+  <section id="css-animations">
+    <h2>Part 1: CSS3 Transitions and Animations</h2>
+    <button class="fancy-btn">Hover Me!</button>
+    <div class="animated-box"></div>
+  </section>
+
+  
+  <section id="js-functions">
+    <h2>Part 2: JavaScript Functions — Scope, Parameters & Return Values</h2>
+    <button onclick="showRandomFact()" id="fact-btn">Show Random Fact</button>
+    <p id="fact-display"></p>
+  </section>
+
+  
+  <section id="combo">
+    <h2>Part 3: Combining CSS Animations with JavaScript</h2>
+    <button onclick="triggerBoxAnimation()" id="animate-btn">Animate the Box!</button>
+    <div id="magic-box"></div>
+
+    <button onclick="toggleModal()" id="modal-btn">Show Modal</button>
+    <div id="modal-overlay" class="modal-hidden">
+      <div id="modal">
+        <h3>Modal Pop-up</h3>
+        <p>This modal slides and fades in/out!</p>
+        <button onclick="toggleModal()">Close</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
